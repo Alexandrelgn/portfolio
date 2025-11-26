@@ -1,0 +1,297 @@
+/* RESET DE BASE POUR LA LÉGÈRETÉ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Utilisation de la police importée */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Fond très clair */
+}
+
+/* MISE EN PAGE GLOBALE */
+.main-header {
+    background: #222; /* Fond sombre pour l'en-tête */
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* Menu fixe en haut */
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.main-nav a:hover {
+    background: #555;
+}
+
+/* SECTIONS GÉNÉRALES */
+main {
+    padding: 20px 5%;
+    max-width: 1200px; /* Limiter la largeur du contenu pour la lisibilité */
+    margin: 0 auto;
+}
+
+.portfolio-section {
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.hero {
+    text-align: justify;
+    padding: 10px 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    display: flex;
+    p{
+        margin-left: 10px;
+        margin-top: 40px;
+    }
+}
+
+/* STYLES SPÉCIFIQUES À LA GALERIE PHOTO */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Grille réactive */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Assure que l'image couvre l'espace sans se déformer */
+    display: block;
+    cursor: pointer;
+}
+
+/* STYLES SPÉCIFIQUES AUX VIDÉOS */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px; /* Taille de base pour la vidéo */
+    margin-top: 10px;
+}
+
+/* BOUTON/LIEN CTA */
+.cta-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* FOOTER */
+.main-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* MEDIA QUERIES pour la réactivité sur mobile */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .main-nav li {
+        margin-bottom: 5px;
+    }
+}
+
+
+/* NOUVEAUX STYLES POUR photos.html */
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.gallery-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff; /* Soulignage de couleur d'accent */
+    display: inline-block;
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    margin: 60px 0;
+}
+
+/* LIGHTBOX (Fenêtre Modale) */
+.lightbox {
+    display: none; /* Cache la modale par défaut */
+    position: fixed;
+    z-index: 2000; /* Assurez-vous qu'elle est au-dessus de tout */
+    padding-top: 120px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Noir semi-transparent */
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 90vh; /* Limiter la hauteur pour ne pas dépasser la vue */
+    object-fit: contain;
+}
+
+.lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* STYLES SPÉCIFIQUES AUX ARTICLES/REPORTAGES */
+
+.article-content {
+    max-width: 800px; /* Limiter la largeur pour le confort de lecture */
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05); /* Légère ombre pour le rendre lisible */
+}
+
+.article-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.article-category {
+    font-size: 0.9em;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.article-header h2 {
+    font-size: 2.5em;
+    font-family: 'Merriweather', serif; /* Utilisation d'une police Serif pour le titre */
+    margin-bottom: 5px;
+}
+
+.article-meta {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.chapo-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 30px 0;
+    font-weight: 500;
+}
+
+.article-body h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-family: 'Merriweather', serif;
+    color: #333;
+}
+
+.article-body p, .article-body ul {
+    font-family: 'Roboto', sans-serif; /* Police Sans-serif pour le corps du texte */
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+/* Citation en Blockquote */
+blockquote {
+    border-left: 5px solid #007bff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    font-style: italic;
+    color: #555;
+}
+
+/* Image pleine largeur dans l'article */
+.article-inline-media, .article-hero-image {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.article-inline-media img, .article-hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centrer l'image */
+}
+
+.article-inline-media figcaption, .article-hero-image figcaption {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 5px;
+}

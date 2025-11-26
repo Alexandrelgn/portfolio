@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre LIGNEUL - Portfolio</title>
+    <meta name="description" content="Portfolio de photographe, vidéaste et journaliste.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Alexandre Ligneul</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#videos">Vidéos</a></li>
+                <li><a href="#ecrits">Écrits</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="accueil" class="hero">
+            <img src="assets/images/AlexandreIMG.jpeg" width="500">
+            <p>Je suis étudiant en première année à l’École Française de Journalisme (EFJ) à Paris. Ce qui m’anime, c'est raconter le monde à travers l’image, en étant sur le terrain. Je m’intéresse particulièrement à ce qui touche aux enjeux politiques, environnementaux, culturels, de société et à l’international.
+            Je me forme aujourd’hui à tous les outils qui me permettront de capter et transmettre ce que je vois : caméra, montage, photo, reportage, mais aussi analyse, écriture et compréhension des contextes.
+            Mon objectif est clair : devenir journaliste reporter d’images, et pouvoir un jour couvrir les zones de conflit, là où l’information est fragile, et essentielle. J’avance avec curiosité, exigence, et l’envie d’apprendre en allant à la rencontre du réel.
+            </p>
+        </section>
+
+        <section id="photos" class="portfolio-section">
+            <h3>📸 Photographie</h3>
+            <div class="gallery-grid">
+                <img src="https://res.cloudinary.com/dpggjkaj4/image/upload/w_300,q_auto,f_auto/v1764109506/rachida-1_pruddc.jpg" alt="Rachida Dati, Municipale 2026 de la ville de Paris" loading="lazy">
+                <img src="https://res.cloudinary.com/dpggjkaj4/image/upload/w_300,q_auto,f_auto/v1764110112/lille1_agur3s.jpg" alt="Halloween à Lille 31 octobre 2025" loading="lazy">
+                </div>
+            <a href="photos.html" class="cta-link">Voir toutes les photos</a>
+        </section>
+
+        <section id="videos" class="portfolio-section">
+            <h3>🎬 Reportages Vidéo</h3>
+            <div class="video-grid">
+                <div class="video-item">
+                    <h4>Interview de Dimitri Caillat : mannequin</h4>
+                    <iframe src="https://www.youtube.com/embed/Wb7d0ZrzU6o?rel=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                </div>
+        </section>
+        
+        <section id="ecrits" class="portfolio-section">
+            <h3>✍️ Reportages Écrits</h3>
+            <ul class="articles-list">
+                <li><a href="articles/1.html">Titre du Reportage A : [Accroche]</a></li>
+                <li><a href="articles/2.html">Titre du Reportage B : [Accroche]</a></li>
+                </ul>
+        </section>
+
+        <section id="contact" class="portfolio-section">
+            <h3>📧 Contact</h3>
+            <p>Envoyez-moi un email à <strong>a.ligneul@icloud.com</strong> ou connectez-vous avec moi sur :</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/alexandre-ligneul/">LinkedIn</a> |
+                <a href="https://www.instagram.com/alexandrelgn/">Instagram</a>
+            </div>
+            </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="current-year"></span> Alexandre LIGNEUL. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // JS simple pour mettre à jour l'année dans le footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <div id="lightbox" class="lightbox" style="display: none;">
+    <span class="close-btn">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+</div>
+</body>
+</html>

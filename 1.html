@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexandre Ligneul - Article</title>
+    
+    <meta name="description" content="Résumé court et percutant du sujet de ce reportage.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Alexandre Ligneul</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html#accueil">Accueil</a></li>
+                <li><a href="../photos.html">Photos</a></li>
+                <li><a href="../index.html#videos">Vidéos</a></li>
+                <li><a href="../index.html#ecrits">Écrits</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="article-content">
+        
+        <article>
+            <header class="article-header">
+                <p class="article-category">Catégorie (Ex: Société, Politique, Culture)</p>
+                <h2>Titre Complet du Reportage : Le Sujet Principal</h2>
+                <p class="article-meta">
+                    Par Alexandre LIGNEUL | Publié le <time datetime="2025-11-26">26 Novembre 2025</time>
+                </p>
+                <figure class="article-hero-image">
+                    <img src="[Lien Cloudinary vers image de couverture de l'article (800px)]" alt="Description visuelle de l'image d'accroche.">
+                    <figcaption>Crédit photo : [Votre Nom]</figcaption>
+                </figure>
+            </header>
+
+            <section class="chapo">
+                <p class="chapo-text">
+                    **C'est ici que vous placez l'introduction ou le chapô. Il doit résumer le sujet, accrocher le lecteur et lui donner envie de lire la suite. Il est souvent en gras ou avec une taille de police légèrement plus grande.**
+                </p>
+            </section>
+
+            <section class="article-body">
+                <h3>Chapitre I : Le Contexte Historique</h3>
+                <p>
+                    Le premier paragraphe introduit la narration. Utilisez des paragraphes courts pour la lisibilité. Évitez les murs de texte. La balise `<p>` doit être la base de tout votre contenu.
+                </p>
+                <p>
+                    Un reportage nécessite souvent des citations. Utilisez la balise `<blockquote>` pour les mettre en évidence et les séparer du reste du texte.
+                </p>
+                
+                <blockquote>
+                    « La citation la plus pertinente du reportage. Elle peut être longue, mais doit être percutante et crédible. » — **Source ou Intervenant**
+                </blockquote>
+
+                <h3>Chapitre II : L'Enquête de Terrain</h3>
+                <p>
+                    Intégration d'un média visuel au milieu du texte. Utilisez un `figure` pour grouper l'image et sa légende. N'oubliez pas l'attribut `loading="lazy"` et l'optimisation Cloudinary pour garder la page légère.
+                </p>
+                <figure class="article-inline-media">
+                    <img src="[Lien Cloudinary vers une image illustrant le Chapitre II]" alt="Description de l'image de terrain.">
+                    <figcaption>Légende de l'image : Description du lieu et du contexte de la photo.</figcaption>
+                </figure>
+                <p>
+                    Le texte continue. Utilisez des listes non ordonnées `<ul>` pour énumérer des points clés ou des faits.
+                </p>
+                <ul>
+                    <li>Fait clé numéro un.</li>
+                    <li>Observation importante numéro deux.</li>
+                    <li>Témoignage essentiel numéro trois.</li>
+                </ul>
+                
+                <h3>Chapitre III : Conclusion et Perspectives</h3>
+                <p>
+                    La conclusion synthétise les découvertes et ouvre sur des perspectives futures. Elle doit laisser une impression durable au lecteur.
+                </p>
+            </section>
+
+            <footer class="article-footer">
+                <p>
+                    Si ce reportage vous a intéressé, n'hésitez pas à le partager ou à me contacter pour discuter du sujet.
+                </p>
+                </footer>
+
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; <span id="current-year"></span> Alexandre LIGNEUL. Tous droits réservés.</p>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
