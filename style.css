@@ -66,6 +66,10 @@ main {
     }
 }
 
+.chapo-text{
+    font-weight: bold;
+}
+
 /* STYLES SPÉCIFIQUES À LA GALERIE PHOTO */
 .gallery-grid {
     display: grid;
@@ -296,3 +300,4 @@ blockquote {
     margin-top: 5px;
 
 }
+
